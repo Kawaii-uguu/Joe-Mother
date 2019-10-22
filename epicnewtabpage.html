@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Tab</title>
+	<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+	<link rel="stylesheet" href="epicnewtabpage.css">
+</head>
+<body onload="startTime()">
+	<div id="txt"></div>
+	<div class="leftbox">
+			
+			<form class="SiteSearch" action="https://duckduckgo.com/?q=search" method="get" style="padding:50px; margin-bottom: 2.5em;">
+			<div>
+				<input name="q" type="text" value="" placeholder="Search DuckDuckGo...">
+			</div>
+			
+		</form>
+	</div>
+	<div class="row">
+		<div class="column">
+			<p>Vidya:</p>
+			<a href="https://4chan.org/v/">/v/idya</a><br/>
+			<a href="https://gbatemp.net/">gbatemp</a><br/>
+			<a href="https://discordapp.com/">Discord</a><br/>
+			<a href="https://lutris.net/">Lutris</a><br/>
+			<a href="https://steam.com/">Steam</a><br/>
+			<a href="https://gog.com/">GOG</a><br/>
+			<a href="https://www.humblebundle.com/">Humble Bundle</a><br/>
+		</div>
+		<div class="column">
+			<p>Code:</p>
+			<a href="https://github.com">Github</a><br/>
+			<a href="https://w3schools.com">w3schools</a><br/>
+			<a href="https://stackoverflow.com">Stackoverflow</a><br/>
+			<a href="https://packages.debian.org/stable/">Debian Buster Packages</a><br/>
+		</div>
+		<div class="column">
+			<p>Images:</p>
+			<a href="https://zerochan.net">Zeroch</a><br/>
+			<a href="https://saucenao.com/index.php">SauceNAO</a><br/>
+			<a href="https://www.tineye.com/">TinEye</a><br/>
+			<a href="https://images.google.com">Google Images</a><br/>
+			<a href="https://safebooru.donmai.us">SafeBooru</a><br/>
+		</div>
+		<div class="column">
+			<p>Procrastination:</p>
+			<a href="https://mywaifulist.moe">WaifuList</a><br/>
+			<a href="https://twist.moe">Anime Twist</a><br/>
+			<a href="https://mangadex.org">Mangadex</a><br/>
+			<a href="https://amazon.com">Amazon</a><br/>
+			<a href="https://trace.moe/#">Anime Trace</a>
+			
+		</div>
+	</div>
+</body>
+</html>
