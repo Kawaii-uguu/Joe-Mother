@@ -1,4 +1,8 @@
-body {font-size:10px; font-family: sourcecodepro; color:#090909; background-image: url("bru.jpg");}
+body {font-size:10px; font-family: sourcecodepro; color:#090909; background-image: url("bru.jpg")  no-repeat center center fixed;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
 
 .leftbox{float: left;
   width: 49%;
