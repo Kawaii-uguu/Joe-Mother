@@ -1,8 +1,5 @@
-body {font-size:10px; font-family: sourcecodepro; color:#090909; background-image: url("bru.jpg")  no-repeat center center fixed;
--webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;}
+body {font-size:10px; font-family: sourcecodepro; color:#090909; background-image: url("bru.jpg"); height: 100%; background-position:center center; background-attachment: fixed; background-repeat: no-repeat; background-size: cover;}
+/* slightly transparent fallback */
 
 .leftbox{float: left;
   width: 49%;
@@ -25,9 +22,11 @@ body {font-size:10px; font-family: sourcecodepro; color:#090909; background-imag
     left:12%;
     height:120px;
     line-height:15px;
+    text-shadow: 0px 0px 1px #505050;
 }
 .SiteSearch input {font-size:10px; border:0px; margin: 8px; width: 50%; /*border-radius:15px;*/ background-color:#ffffff; color:#181818; padding:8px 15px; font-family:sourcecodepro; opacity: 0.6;}
 .SiteSearch input:hover {font-size:10px; border:0px; margin: 8px; width: 50%; /*border-radius:15px;*/ background-color:#ffffff; color:#050505; padding:8px 15px; font-family:sourcecodepro; opacity: 0.9;}
+
 .row{float: left;
   width: 35%;
   position: absolute;
@@ -39,7 +38,35 @@ body {font-size:10px; font-family: sourcecodepro; color:#090909; background-imag
   line-height:15px;
   background-color: #ffffff;
   opacity: 0.6;
-  filter: alpha(opacity=60);
+  filter: alpha(opacity=0.6);
+  text-overflow: ellipsis;
+  
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: auto;
+
+ -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+}
+.row::before{
+	content: '';
+	float: left;
+  	width: 35%;
+  	position: absolute;
+  	margin: auto;
+  	top: 0;
+  	bottom: 0;
+  	right: 30px;
+  	height:200px;
+  	background-color: #ffffff;
+  	opacity: 0.6;
+  	text-overflow: ellipsis;
+  	/* Required for text-overflow to do anything */
+  	white-space: nowrap;
+  	overflow: auto;
+  	filter: blur(35px);
+  	z-index: -1;
+  	
 }
 .column{float:left; margin: 5px;}
 .procrastination{margin: 5px;}
@@ -54,4 +81,16 @@ a:hover{color: #e23d3d;}
 @font-face {
   font-family: 'sourcecodepro';
   src: url('SourceCodePro-Regular.ttf')  format('truetype');
+}
+.backdrop-blur {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+/* if backdrop support: very transparent and blurred */
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
+  .backdrop-blur {
+    background-color: rgba(255, 255, 255, .5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
 }
