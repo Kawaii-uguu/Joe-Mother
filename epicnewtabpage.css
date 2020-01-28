@@ -1,4 +1,16 @@
-body {font-size:10px; font-family: sourcecodepro; color:#090909; background-image: url("bru.jpg"); height: 100%; background-position:center center; background-attachment: fixed; background-repeat: no-repeat; background-size: cover;}
+body {
+  font-size:10px; 
+  font-family: sourcecodepro; 
+  color:#C8C8C8; 
+  background-color: #121212; 
+  height: 100%; 
+  background-position:center center; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  scrollbar-color: #202020 #121212;
+  scrollbar-width: thin;
+}
 /* slightly transparent fallback */
 
 .leftbox{float: left;
@@ -22,10 +34,35 @@ body {font-size:10px; font-family: sourcecodepro; color:#090909; background-imag
     left:12%;
     height:120px;
     line-height:15px;
-    text-shadow: 0px 0px 1px #505050;
 }
-.SiteSearch input {font-size:10px; border:0px; margin: 8px; width: 50%; /*border-radius:15px;*/ background-color:#ffffff; color:#181818; padding:8px 15px; font-family:sourcecodepro; opacity: 0.6;}
-.SiteSearch input:hover {font-size:10px; border:0px; margin: 8px; width: 50%; /*border-radius:15px;*/ background-color:#ffffff; color:#050505; padding:8px 15px; font-family:sourcecodepro; opacity: 0.9;}
+.SiteSearch input {
+  font-size:10px; 
+  border-left:0px; 
+  border-right:0px;
+  border-top:0px; 
+  margin: 8px; 
+  width: 50%; 
+  /*border-radius:15px;*/ 
+  background-color:#121212; 
+  color:#C8C8C8; 
+  padding:8px 15px; 
+  font-family:sourcecodepro; 
+  opacity: 0.6;
+}
+.SiteSearch input:hover {
+  font-size:10px; 
+  border-left:0px; 
+  border-right:0px;
+  border-top:0px; 
+  margin: 8px; 
+  width: 50%; 
+  /*border-radius:15px;*/ 
+  background-color:#141414; 
+  color:#C8C8C8; 
+  padding:8px 15px; 
+  font-family:sourcecodepro; 
+  opacity: 0.9;
+}
 
 .row{float: left;
   width: 35%;
@@ -36,9 +73,7 @@ body {font-size:10px; font-family: sourcecodepro; color:#090909; background-imag
   right: 30px;
   height:200px;
   line-height:15px;
-  background-color: #ffffff;
-  opacity: 0.6;
-  filter: alpha(opacity=0.6);
+  background-color: #121212;
   text-overflow: ellipsis;
   
   /* Required for text-overflow to do anything */
@@ -58,21 +93,19 @@ body {font-size:10px; font-family: sourcecodepro; color:#090909; background-imag
   	bottom: 0;
   	right: 30px;
   	height:200px;
-  	background-color: #ffffff;
   	opacity: 0.6;
   	text-overflow: ellipsis;
   	/* Required for text-overflow to do anything */
   	white-space: nowrap;
-  	overflow: auto;
-  	filter: blur(35px);
+  	overflow: show;
   	z-index: -1;
   	
 }
 .column{float:left; margin: 5px;}
 .procrastination{margin: 5px;}
-a:link {color:#090909;}
-a:visited {color:#090909;}
-a:hover{color: #e23d3d;}
+a:link {color:#C8C8C8;}
+a:visited {color:#C8C8C8;}
+a:hover{color: #C8C8C8;}
 .row:after {
   content: "";
   display: table;
@@ -82,15 +115,4 @@ a:hover{color: #e23d3d;}
   font-family: 'sourcecodepro';
   src: url('SourceCodePro-Regular.ttf')  format('truetype');
 }
-.backdrop-blur {
-  background-color: rgba(255, 255, 255, .9);
-}
 
-/* if backdrop support: very transparent and blurred */
-@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
-  .backdrop-blur {
-    background-color: rgba(255, 255, 255, .5);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-  }
-}
